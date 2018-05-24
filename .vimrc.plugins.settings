@@ -1,3 +1,14 @@
+" Map key
+" Map leader key to ,
+let mapleader = ","
+let g:mapleader = ","
+
+" Move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-l> <C-W>l
+map <C-h> <C-W>h
+
 set nu
 set autoread
 set autowrite
@@ -8,13 +19,6 @@ let g:rehash256 = 1
 set clipboard=unnamedplus
 set cursorline
 set backspace=indent,eol,start
-
-" Map leader key
-let mapleader = "," " map leader key to ,
-let g:mapleader = ","
-
-" Fast saving
-nmap <leader>w :w!<cr>
 
 " Disable all backup file
 set nobackup
@@ -29,6 +33,7 @@ set directory=/tmp
 set listchars=tab:\|\ ,space:·
 set list
 
+
 " Start Nerd tree when open vim
 au VimEnter *  NERDTree
 let NERDTreeShowHidden=1
@@ -38,26 +43,8 @@ if has('mouse')
 set mouse=a
 endif
 
-" Move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-l> <C-W>l
-map <C-h> <C-W>h
-
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
-
-" Go vim
-let g:go_gocode_autobuild = 1
-let g:go_gocode_propose_builtins = 1
-let g:go_disable_autoinstall = 0
-
-" Highlight
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-
 let g:tagbar_type_elixir = {
     \ 'ctagstype' : 'elixir',
     \ 'kinds' : [
@@ -103,6 +90,17 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
 \ }
+
+" Go vim
+let g:go_gocode_autobuild = 1
+let g:go_gocode_propose_builtins = 1
+let g:go_disable_autoinstall = 0
+
+" Highlight
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
 
 " Muti cursor
 let g:multi_cursor_use_default_mapping=0
@@ -203,36 +201,17 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
-"let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-"let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-"let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-
-" For perlomni.vim setting.
-" https://github.com/c9s/perlomni.vim
-let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-" Specify a directory for plugins
-" - For Neovim: ~/.local/share/nvim/plugged
-" - Avoid using standard Vim directory names like 'plugin'
 
 let g:mix_format_on_save = 1
 let g:mix_format_options = '--check-equivalent'
 let g:mix_format_silent_errors = 1
 let g:mix_format_elixir_bin_path = '~/.asdf/shims'
 
-" Put these lines at the very end of your vimrc file.
-
-" Load all plugins now.
 " Plugins need to be added to runtimepath before helptags can be generated.
 packloadall
+
 " Load all of the helptags now, after plugins have been loaded.
 " All messages and errors will be ignored.
 silent! helptags ALL
