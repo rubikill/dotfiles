@@ -2,3 +2,4 @@
 .vimrc.bundles
 .vimrc.plugins.settings
 .vimrc
+.ctags
