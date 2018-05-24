@@ -1,0 +1,63 @@
+" Make sure you use single quotes
+
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'junegunn/vim-easy-align'
+
+" Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
+Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
+
+" Tagbar
+Plug 'https://github.com/majutsushi/tagbar.git'
+
+" Multiple cursors
+Plug 'https://github.com/terryma/vim-multiple-cursors.git'
+
+" Run your favorite search tool from Vim
+Plug 'https://github.com/mileszs/ack.vim.git'
+Plug 'scrooloose/nerdcommenter'
+
+" Neo complete
+Plug 'https://github.com/Shougo/neocomplete.vim.git'
+Plug 'posva/vim-vue'
+
+" Ale
+Plug 'https://github.com/w0rp/ale.git'
+
+" Git gutter
+Plug 'airblade/vim-gitgutter'
+
+" Air line
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Color schemes
+Plug 'https://github.com/rafi/awesome-vim-colorschemes.git'
+Plug 'dracula/vim'
+
+" Multiple Plug commands can be written in a single line using | separators
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+
+" Using a non-master branch
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+
+" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
+Plug 'fatih/vim-go', { 'tag': '*' }
+
+" Plugin options
+Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+
+" Plugin outside ~/.vim/plugged with post-update hook
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+Plug 'elixir-editors/vim-elixir'
+
+Plug 'mhinz/vim-mix-format'
+
+" Unmanaged plugin (manually installed and updated)
+Plug '~/my-prototype-plugin'
+
+Plug 'dracula/vim', { 'as': 'dracula' }

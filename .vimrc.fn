@@ -1,0 +1,6 @@
+" Delete_trailing remove unneccessary  space in code when saving
+func! Delete_trailing()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
