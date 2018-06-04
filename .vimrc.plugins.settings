@@ -35,8 +35,9 @@ set list
 
 
 " Start Nerd tree when open vim
-au VimEnter *  NERDTree
+" au VimEnter *  NERDTree
 let NERDTreeShowHidden=1
+nmap <F7> :NERDTreeToggle<CR>
 
 " Use mouse
 if has('mouse')
