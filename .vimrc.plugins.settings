@@ -37,7 +37,7 @@ set list
 
 
 " Start Nerd tree when open vim
-au VimEnter *  NERDTree
+" au VimEnter *  NERDTree
 let NERDTreeShowHidden=1
 
 " Use mouse
@@ -47,6 +47,8 @@ endif
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
+nmap <F7> :NERDTreeToggle<CR>
+
 let g:tagbar_type_elixir = {
     \ 'ctagstype' : 'elixir',
     \ 'kinds' : [
@@ -204,8 +206,7 @@ if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
 
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|_build'
 let g:mix_format_on_save = 1
 let g:mix_format_options = '--check-equivalent'
 let g:mix_format_silent_errors = 1
