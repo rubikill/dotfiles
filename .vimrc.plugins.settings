@@ -3,12 +3,14 @@
 let mapleader = ","
 let g:mapleader = ","
 
+noremap <Leader>s :update<CR>
+
 " Move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-l> <C-W>l
 map <C-h> <C-W>h
-nmap <leader>w :w!<cr>
+
 set nu
 set autoread
 set autowrite
@@ -35,9 +37,8 @@ set list
 
 
 " Start Nerd tree when open vim
-" au VimEnter *  NERDTree
+au VimEnter *  NERDTree
 let NERDTreeShowHidden=1
-nmap <F7> :NERDTreeToggle<CR>
 
 " Use mouse
 if has('mouse')
@@ -203,7 +204,7 @@ if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
 
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|_build'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 let g:mix_format_on_save = 1
 let g:mix_format_options = '--check-equivalent'
@@ -220,7 +221,3 @@ silent! helptags ALL
 " Set this setting in vimrc if you want to fix files automatically on save.
 " This is off by default.
 let g:ale_fix_on_save = 1
-
-let g:alchemist_tag_map = '<C-]>'
-let g:alchemist_tag_stack_map = '<C-T>'
-
