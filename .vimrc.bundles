@@ -54,7 +54,7 @@ Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 Plug 'elixir-editors/vim-elixir'
-
+Plug 'slashmili/alchemist.vim'
 Plug 'mhinz/vim-mix-format'
 
 " Unmanaged plugin (manually installed and updated)
